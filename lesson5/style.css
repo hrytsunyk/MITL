@@ -1,0 +1,21 @@
+.members {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.member {
+    border: 1px solid black;
+    width: 500px;
+    margin: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+}
+
+img {
+    width: 150px;
+    position: relative;
+    left: 60%;
+}
