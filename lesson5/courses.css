@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+}
+.father {
+    width: 1000px;
+    height: 600px;
+    background: silver;
+    margin: 0;
+
+}
+
+.course {
+    margin: 10px;
+    border: 1px solid black;
+    width: 800px;
+    height: 400px;
+}
+#course-0{
+
+
+}
+
+h2 {
+    background: cornflowerblue;
+box-sizing: border-box;
+    padding: 5px;
+    margin: 10px;
+
+}
