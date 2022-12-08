@@ -138,9 +138,32 @@ coursesArray.forEach((value, index) => {
     let div = document.createElement('div')
     div.classList.add('course');
     div.id= 'course-'+index;
+
     let h2 = document.createElement('h2');
     h2.innerText = value.title
-    div.append(h2)
+
+    let h3 = document.createElement('h3');
+    h3.classList.add('left');
+    h3.innerText = 'Month duration: '+value.monthDuration;
+
+    let h3_2 = document.createElement('h3');
+    h3_2.classList.add('right');
+    h3_2.innerText = 'Hour duration: '+value.hourDuration;
+
+    let div2 = document.createElement('div');
+    div2.classList.add('ul')
+
+    let ul = document.createElement('ul');
+    ul.innerHTML = 'Modules: ';
+    ul.style= ''
+    ul.classList.add('lishka');
+    for (const module of value.modules) {
+        let li = document.createElement('li');
+        li.innerHTML = module;
+        ul.append(li)
+        div2.append(ul);
+    }
+    div.append(h2,h3, h3_2, div2)
     father.append(div)
 })
 

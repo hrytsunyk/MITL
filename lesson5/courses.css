@@ -4,8 +4,12 @@ body{
 .father {
     width: 1000px;
     height: 600px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     background: silver;
     margin: 0;
+
 
 }
 
@@ -14,16 +18,52 @@ body{
     border: 1px solid black;
     width: 800px;
     height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
 }
 #course-0{
 
 
 }
 
-h2 {
+h2{
     background: cornflowerblue;
-box-sizing: border-box;
-    padding: 5px;
     margin: 10px;
+    width: 800px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 10px;
 
+
+
+}
+
+
+.right {
+    background: cornflowerblue;
+    width: 500px;
+    height: 40px;
+    margin: 10px ;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.left {
+    background: cornflowerblue;
+    width: 260px;
+    height: 40px;
+    margin: 10px ;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.module {
+    width: 800px;
+    background: cornflowerblue;
+    margin: 10px ;
+    box-sizing: border-box;
+    padding: 10px;
 }
