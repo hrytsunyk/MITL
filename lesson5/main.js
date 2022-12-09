@@ -283,7 +283,7 @@ let coursesAndDurationArray = [
 let text = document.createElement('h2');
 text.innerHTML = 'Hello okten';
 text.onclick = () => text.
-document.body.append(text)
+document.body.append(text).
 //     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
 //
 //
