@@ -2,10 +2,10 @@ body{
     margin: 0;
 }
 .father {
-    width: 1000px;
-    height: 600px;
+    /*width: 1000px;*/
+    /*height: 600px;*/
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     background: silver;
     margin: 0;
@@ -17,7 +17,7 @@ body{
     margin: 10px;
     border: 1px solid black;
     width: 800px;
-    height: 400px;
+    background: #466293;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -60,10 +60,10 @@ h2{
     padding: 10px;
 }
 
-.module {
-    width: 800px;
+.lishka {
+    width: 780px;
     background: cornflowerblue;
     margin: 10px ;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 25px;
 }
