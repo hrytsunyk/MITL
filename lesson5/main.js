@@ -249,14 +249,14 @@
 
 //
 // - Є масив
-let coursesAndDurationArray = [
-    {title: 'JavaScript Complex', monthDuration: 5},
-    {title: 'Java Complex', monthDuration: 6},
-    {title: 'Python Complex', monthDuration: 6},
-    {title: 'QA Complex', monthDuration: 4},
-    {title: 'FullStack', monthDuration: 7},
-    {title: 'Frontend', monthDuration: 4}
-];
+// let coursesAndDurationArray = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
 //
 //
 // За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
@@ -280,13 +280,90 @@ let coursesAndDurationArray = [
 // -----------
 //
 //     - Створити довільний елемент з id = text.  Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
-let text = document.createElement('h2');
-text.innerHTML = 'Hello okten';
-text.onclick = () => text.
-document.body.append(text).
-//     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
+// let div = document.createElement('div');
+// div.id= 'text';
+// let text = document.createElement('h2');
+// text.innerHTML = 'Hello okten';
 //
+// let button = document.createElement('button');
+// button.innerHTML ='Click';
+// div.append(text, button);
+//
+// button.onclick = ()=> {
+//     div.style.display = 'none';
+// }
+//
+//
+// document.body.append(div)
+
+//     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
+
+// let div = document.createElement('div');
+// let input = document.createElement('input');
+// let button = document.createElement('button');
+//
+// button.innerHTML = 'Chek your age'
+// div.append(input, button);
+//
+// button.onclick =() => {
+//
+//     if (input.value >= 18 ) {
+//         alert('Welcome')
+//     } else if (!input.value) {
+//         alert('error')
+//     }
+//     else  if (input.value < 18){
+//         alert('Your age is under 18')
+//     }
+// }
+//
+// document.body.append(div)
+
+
+
+
+
 //
 // *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
+
+let inputOne= document.createElement('input');
+let inputTwo = document.createElement('input');
+let inputThree = document.createElement('input');
+
+let button = document.createElement('button');
+button.innerHTML = 'generate';
+
+document.body.append(inputOne, inputTwo, inputThree, button);
+
+
+
+button.onclick = () => {
+     let tt = inputOne.value;
+     let vv = inputTwo.value;
+     let text = inputThree.value;
+
+     const generate = (raws, columns, word) => {
+         let table = document.createElement('table');
+         table.style.border = '2px solid black';
+         document.body.append(table);
+
+         for (let i = 0; i < raws; i++) {
+             let raw = document.createElement('tt');
+             table.append(raw);
+
+             for (let j = 0; j < columns; j++) {
+                 let column = document.createElement('vv');
+                 column.innerText = `${word}`;
+                 column.style.border = '2px solid red';
+                 raw.append(column)
+             }
+         }
+
+     }
+     generate(tt, vv, text);
+}
+
+
+
