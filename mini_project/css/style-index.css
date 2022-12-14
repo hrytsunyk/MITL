@@ -1,0 +1,70 @@
+.father {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.users {
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.user {
+    width: 200px;
+    height: 80px;
+    font-size: 18px;
+    text-align: center;
+    background: cornflowerblue;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    box-sizing: border-box;
+    z-index: +1;
+
+
+
+}
+
+button {
+    border-radius: 5px;
+}
+
+/*a::before{*/
+/*    content: "" ;*/
+/*    display: block;*/
+/*    width: 5px;*/
+/*    height: 100%;*/
+/*    position: absolute;*/
+/*    background: #ffffff;*/
+/*    transform: skew(20deg);*/
+/*    filter: blur(20px);*/
+/*    top: 0;*/
+/*    left: -100px;*/
+/*    animation: xxx 3000ms ease-in-out infinite;*/
+/*    z-index: 0;*/
+/*}*/
+
+/*@keyframes xxx {*/
+/*    0% {*/
+/*        left: -100px;*/
+/*    }*/
+/*    100% {*/
+/*        left: 100%;*/
+/*    }*/
+/*}*/
+
+button:hover {
+    background: #e3a91d;
+    transition: 300ms;
+    font-size: 15px;
+}

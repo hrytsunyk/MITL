@@ -334,36 +334,46 @@ let inputThree = document.createElement('input');
 
 let button = document.createElement('button');
 button.innerHTML = 'generate';
-
-document.body.append(inputOne, inputTwo, inputThree, button);
-
+let clear = document.createElement("button");
+clear.innerHTML = 'clear';
 
 
 button.onclick = () => {
-     let tt = inputOne.value;
-     let vv = inputTwo.value;
+
+     let tr= inputOne.value;
+     let td = inputTwo.value;
      let text = inputThree.value;
 
      const generate = (raws, columns, word) => {
          let table = document.createElement('table');
          table.style.border = '2px solid black';
          document.body.append(table);
-
+         clear.onclick = () => {
+             table.style.display = 'none';}
          for (let i = 0; i < raws; i++) {
-             let raw = document.createElement('tt');
+             let raw = document.createElement('tr');
              table.append(raw);
 
              for (let j = 0; j < columns; j++) {
-                 let column = document.createElement('vv');
-                 column.innerText = `${word}`;
+                 let column = document.createElement('td');
+                 column.innerText = `${word} - ${Math.round(Math.random()*100)}`;
                  column.style.border = '2px solid red';
                  raw.append(column)
+
+
+
              }
+
+
          }
 
      }
-     generate(tt, vv, text);
+
+     generate(tr, td, text);
 }
+
+
+document.body.append(inputOne, inputTwo, inputThree, button, clear);
 
 
 
