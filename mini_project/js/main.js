@@ -10,7 +10,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
         div.innerHTML =`${user.id}. ${user.name} `;
 
         let a = document.createElement('a');
-        a.href = 'user-details.html';
+        a.href = `user-details.html?id=${user.id}`;
         a.target = 'blank';
         div.append(a);
 
