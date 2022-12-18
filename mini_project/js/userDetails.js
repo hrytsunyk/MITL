@@ -14,10 +14,10 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}` )
 
              let userInfo = document.querySelector('.users-info');
                 let h2 = document.createElement('h2')
-
-                    let img = document.createElement('img');
+                let img = document.createElement('img');
                 img.alt = 'Photo.img'
                 img.classList.add('face');
+
                 for (const userPic of data) {
                     if (id == userPic.id) {
                         img.src = `${userPic.avatar}`;
@@ -56,7 +56,12 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}` )
                         }
 
                         userInfo.appendChild(userDiv)
+
                     }
+                        let button = document.createElement('div');
+                            button.classList.add('button');
+                            button.innerHTML = 'post of current user';
+                            userInfo.appendChild(button);
 
 
             })

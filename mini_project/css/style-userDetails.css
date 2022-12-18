@@ -10,8 +10,13 @@
 }
 
 .users-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border: 1px solid white;
-    box-shadow:;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.2);
     text-align: center;
     width: 500px;
     height: 500px;
@@ -22,4 +27,30 @@
     border-radius: 50%;
     position: relative;
     top: -10%;
+}
+
+* {
+    color: white;
+}
+
+.button {
+    width: 150px;
+    height: 50px;
+    background-image: url("../pictures/img.png");
+    background-size: 500px;
+    background-position: bottom;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+}
+
+
+.button:hover {
+    color: black;
+    transition: 300ms;
+    font-size: 15px;
 }
