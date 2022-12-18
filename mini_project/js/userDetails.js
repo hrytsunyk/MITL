@@ -24,11 +24,12 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}` )
                         userInfo.append(img);
                     }
                 }
-                    for (const key in obj) {
-                        let userDiv = document.createElement('div');
 
-                        if (typeof obj[key] !== 'object') {
-                            userDiv.innerHTML = `${key}: ${obj[key]}`
+                for (const key in obj) {
+                    let userDiv = document.createElement('div');
+
+                    if (typeof obj[key] !== 'object') {
+                        userDiv.innerHTML = `${key}: ${obj[key]}`
                         } else {
                             userDiv.innerHTML = `${key}:`;
 
@@ -59,11 +60,9 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}` )
 
                     }
                         let button = document.createElement('div');
-                        let h5 = document.createElement('div');
-                        h5.classList.add('postOnClick')
 
                         let postAnchor = document.createElement('a');
-                        postAnchor.href = `userPost.html?post=${id}`
+                        postAnchor.href = `posts.html?post=${id}`
 
                             button.classList.add('button');
                             postAnchor.innerHTML = 'post of current user';

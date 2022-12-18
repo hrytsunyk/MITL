@@ -10,6 +10,8 @@
 }
 
 .users-info {
+    width: 500px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,8 +20,6 @@
     border-radius: 5px;
     box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.2);
     text-align: center;
-    width: 500px;
-    height: 500px;
     position: relative;
 }
 
