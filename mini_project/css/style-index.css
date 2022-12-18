@@ -1,70 +1,103 @@
+.background {
+    /*width: 100vw;*/
+    height: 1300px;
+    background-image: url("../pictures/img.png");
+    -webkit-background-size: 100% ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .father {
-    width: 100vw;
+    /*margin: 20px;*/
+    width: 600px;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.users {
-    width: 450px;
+.userTextDiv {
+    width: 200px;
     display: flex;
+    flex-wrap: wrap;
+    text-align: center;
     justify-content: center;
+    align-items: center;
+
+}
+.users {
+    width: 500px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 
+.h4-userName {
+    color: white;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
 .user {
-    width: 200px;
-    height: 80px;
-    font-size: 18px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../pictures/userIcon.svg");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid black;
     text-align: center;
-    background: cornflowerblue;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin: 5px;
+    border-radius: 50%;
+    /*margin: 20px;*/
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 5px;
     box-sizing: border-box;
-    z-index: +1;
-
-
-
 }
 
-button {
-    border-radius: 5px;
+.face {
+    border-radius: 50%;
+    position: relative;
+    bottom: 20px;
 }
 
-/*a::before{*/
-/*    content: "" ;*/
-/*    display: block;*/
-/*    width: 5px;*/
-/*    height: 100%;*/
-/*    position: absolute;*/
-/*    background: #ffffff;*/
-/*    transform: skew(20deg);*/
-/*    filter: blur(20px);*/
-/*    top: 0;*/
-/*    left: -100px;*/
-/*    animation: xxx 3000ms ease-in-out infinite;*/
-/*    z-index: 0;*/
+.title {
+    color: white;
+    margin:  30px;
+}
+
+.h4-userName, a:hover {
+    color: black;
+    transition: 500ms;
+}
+
+
+
+
+/*.button {*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    border-radius: 50%;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
 /*}*/
 
-/*@keyframes xxx {*/
-/*    0% {*/
-/*        left: -100px;*/
-/*    }*/
-/*    100% {*/
-/*        left: 100%;*/
-/*    }*/
-/*}*/
 
-button:hover {
-    background: #e3a91d;
-    transition: 300ms;
-    font-size: 15px;
-}
+
+
+
+
+
+/*.button:hover {*/
+/*    background: #e3a91d;*/
+/*    transition: 300ms;*/
+/*    font-size: 15px;*/
+/*}*/

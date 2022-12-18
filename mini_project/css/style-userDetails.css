@@ -1,0 +1,25 @@
+.background {
+    height: 100vh;
+    background-image: url("../pictures/img.png");
+    -webkit-background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.users-info {
+    border: 1px solid white;
+    box-shadow:;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.face {
+    border-radius: 50%;
+    position: relative;
+    top: -10%;
+}
