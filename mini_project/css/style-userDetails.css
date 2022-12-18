@@ -33,7 +33,7 @@
     color: white;
 }
 
-.button {
+.button a{
     width: 150px;
     height: 50px;
     background-image: url("../pictures/img.png");
@@ -46,11 +46,17 @@
     align-items: center;
     position: relative;
     top: 20px;
+    text-decoration: none;
 }
 
 
-.button:hover {
+
+.button :hover {
     color: black;
+
     transition: 300ms;
-    font-size: 15px;
+}
+
+h5 {
+    /*z-index: +1;*/
 }

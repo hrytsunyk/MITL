@@ -59,8 +59,16 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}` )
 
                     }
                         let button = document.createElement('div');
+                        let h5 = document.createElement('div');
+                        h5.classList.add('postOnClick')
+
+                        let postAnchor = document.createElement('a');
+                        postAnchor.href = `userPost.html?post=${id}`
+
                             button.classList.add('button');
-                            button.innerHTML = 'post of current user';
+                            postAnchor.innerHTML = 'post of current user';
+
+                            button.appendChild(postAnchor)
                             userInfo.appendChild(button);
 
 
