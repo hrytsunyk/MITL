@@ -1,0 +1,100 @@
+.background {
+    height: 100vh;
+    background-image: url("../pictures/img.png");
+    -webkit-background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-container {
+    width: 100%
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    perspective: 1000px;
+}
+
+.users-card.flipCard {
+    transform: rotateY(-180deg);
+}
+
+.users-card {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: all 500ms;
+    transform-style: preserve-3d;
+    position: relative;
+
+}
+
+.user-card-front,
+.user-card-back {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backface-visibility: hidden;
+}
+
+
+.button {
+    width: 100px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-image: url("../pictures/img.png");
+    background-size: 700px;
+    background-position: bottom;
+    margin: 10px;
+    transition: 1000ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+
+    transition: 1000ms;
+    width: 150px;
+    height: 40px;
+}
+.face {
+    border-radius: 50%;
+    position: relative;
+    top: -60px;
+}
+
+* > h4, p {
+    color: white;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.first-h4 {
+    position: relative;
+    top: -50px;
+}
+.second-h4 {
+    position: relative;
+    top: -45px;
+}
+
+.third-h4{
+    position: relative;
+    top: -25px;
+}
