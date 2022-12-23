@@ -1,0 +1,32 @@
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../pictures/img.png");
+    -webkit-background-size: 100% ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.father {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.2);
+    text-align: center;
+
+}

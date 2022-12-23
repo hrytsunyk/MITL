@@ -24,7 +24,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}` )
                                     img.src = `${userPic.avatar}`;
                                     photo.append(img);
                                 }
-                            }
+                            };
 
                 for (const key in obj) {
                     let firstH4 = document.querySelector('.first-h4');
@@ -35,9 +35,10 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}` )
                     if (typeof obj[key] !== 'object') {
                         h4.innerHTML = `${key}: ${obj[key]}`;
                         firstH4.appendChild(h4);
-                    } else {
-                        let h4_2 = document.createElement('h4');
 
+                    } else {
+
+                        let h4_2 = document.createElement('h4');
                         h4_2.innerHTML = `${key}:`;
                         secondH4.appendChild(h4_2)
 
@@ -69,115 +70,81 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}` )
 
                 }
 
+            });
+
+        fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
+            .then(response => response.json())
+            .then(posts => {
+
+                let button = document.querySelector('.button');
+                let card = document.querySelector('.users-card');
+
+                button.addEventListener('click',
+
+                    function flip_fn() {
+                    card.classList.toggle('flipCard');
+                    button.classList.toggle('back');
+                    });
+
+                let divFlipCard = document.querySelector('.user-card-back');
+                let postsTitle = document.createElement('h2')
+                postsTitle.innerHTML = 'Users posts:';
+                divFlipCard.appendChild(postsTitle)
+                        let ol = document.createElement('ol');
+
+                for (const post of posts) {
+                        let li = document.createElement('li');
+                        let a = document.createElement('a')
+
+                        a.href = `posts_index.html?post=${post.id}`;
+                        a.target ='_blank';
+                        a.innerText = post.title;
+
+                        li.appendChild(a);
+                        ol.appendChild(li);
+                        divFlipCard.appendChild(ol);
+                    }
+
             })
 
-
-})
-
-
-
-
-
-
-
-let button = document.querySelector('.button')
-let card = document.querySelector('.users-card')
-
-button.addEventListener('click', () => {
-    card.classList.toggle('flipCard')
 });
 
 
 
 
+//     fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
+//         .then(response => response.json())
+//         .then(posts => {
+//
+// let button = document.querySelector('.button')
+// let card = document.querySelector('.users-card')
+//
+//            button.addEventListener('click',
+//                 function flip_fn() {
+//                card.classList.toggle('flipCard')
+//
+//
+//             let divFlipCard = document.querySelector('.users-card.flipCard > .user-card-back');
+//             // let divUserCard = document.querySelector('.user-card-back');
+//             let ul = document.createElement('ul');
+//             let a = document.createElement('a')
+//                     a.href = `posts_index.html/?=${id}/`
+//
+//             setTimeout( function () {
+//
+//                     for (let i = 0; i < posts.length; i++) {
+//                         const post = posts[i];
+//                         let li = document.createElement('li');
+//                         li.innerText = post.title;
+//                         ul.appendChild(li);
+//
+//                         divFlipCard.appendChild(ul);
+//                     }
+//
+//             }, 600)
+//
+//
+//         });
+//         })
 
-
-
-
-    //
-    //          let divFrontCard = document.querySelector('.user-card-front');
-    //          let divBackCard = document.querySelector('.user-card-back');
-    //          let divUsersCard = document.querySelector('.users-card');
-    //          let {data} = value;
-    //             let h2 = document.createElement('h2')
-    //             let img = document.createElement('img');
-    //             img.alt = 'Photo.img'
-    //             img.classList.add('face');
-    //
-    //             for (const userPic of data) {
-    //                 if (id == userPic.id) {
-    //                     img.src = `${userPic.avatar}`;
-    //                     divFrontCard.append(img);
-    //                 }
-    //             }
-    //
-    //             for (const key in obj) {
-    //                 let userDiv = document.createElement('div');
-    //
-    //                 if (typeof obj[key] !== 'object') {
-    //                     userDiv.innerHTML = `${key}: ${obj[key]}`
-    //                     divFrontCard.appendChild(userDiv)
-    //
-    //                     } else {
-    //                         divFrontCard.innerHTML = `${key}:`;
-    //
-    //                         for (const inner in obj[key]) {
-    //                             let innerDiv = document.createElement('div');
-    //                             if (typeof obj[key][inner] !== 'object') {
-    //                                 innerDiv.innerHTML = `${inner}: ${obj[key][inner]}`
-    //
-    //                             } else {
-    //                                 innerDiv.innerHTML = `${inner}:`
-    //
-    //                                 for (const endKey in obj[key][inner]) {
-    //                                     let endDiv = document.createElement('div');
-    //                                     if (typeof obj[key][inner][endKey] !== 'object') {
-    //                                         endDiv.innerHTML = `${endKey}: ${obj[key][inner][endKey]}`
-    //                                     }
-    //                                     innerDiv.appendChild(endDiv)
-    //
-    //                                 }
-    //
-    //                             }
-    //                             userDiv.appendChild(innerDiv)
-    //
-    //                         }
-    //
-    //                     }
-    //
-    //                     userInfo.appendChild(userDiv)
-    //
-    //                 }
-    //                     let button = document.createElement('div');
-    //
-    //                     let postAnchor = document.createElement('a');
-    //                     postAnchor.href = `posts.html?post=${id}`
-    //
-    //                         button.classList.add('button');
-    //                         postAnchor.innerHTML = 'post of current user';
-    //
-    //                         button.appendChild(postAnchor)
-    //                         userInfo.appendChild(button);
-    //
-    //
-    //         })
-    //
-    // })
-//         let divInfo = document.querySelector('.users-info')
-// let divUserinfo = document.createElement('div');
-// let h2 = document.createElement('h2');
-// h2.innerHTML = `${key}:`
-// divUserinfo.append(h2);
-
-
-        // divInfo.appendChild(divUserinfo)
-
-// let divInfo = document.querySelector('.users-info')
-// let div = document.createElement('div');
-// let h2 = document.createElement('h2');
-// h2.innerHTML =
-// div.append(h2)
-
-
-// divInfo.appendChild(div)
 
