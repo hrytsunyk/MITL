@@ -20,10 +20,26 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postID}`)
        fetch(`https://jsonplaceholder.typicode.com/posts/${postID}/comments`)
        .then (Response => Response.json())
            .then( comments => {
+               let bg = document.querySelector('.background');
         let button = document.createElement('button');
-               button.innerHTML = 'Show comments';
+               button.innerHTML = 'hide comments';
                let commentsDiv = document.createElement('div');
                commentsDiv.classList.add('comments');
+
+                   button.onclick =() =>{
+                       if (commentsDiv.style.display === 'none') {
+                           commentsDiv.style.display = 'flex';
+                           button.innerHTML = 'hide comments';
+                           child.style.height = '1000px';
+
+                       } else  {
+                           commentsDiv.style.display = 'none';
+                           button.innerHTML = 'show comments';
+                           child.style.height = '100%';
+
+
+                       }
+                   };
 
                for (const comment of comments) {
                    let comTitleDiv = document.createElement('div');
@@ -40,18 +56,12 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postID}`)
 
                    commentsDiv.append(comTitleDiv)
 
+
                }
 
                   child.append(idTitle, bodyPost, button, commentsDiv);
 
 
-               button.onclick =() =>{
-                   if (commentsDiv.style.display === 'none') {
-                       commentsDiv.style.display = 'block';
-                   } else  {
-                       commentsDiv.style.display = 'none';
-                   }
-               };
            })
 
 
