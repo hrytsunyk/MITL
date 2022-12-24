@@ -83,7 +83,6 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}` )
 
                     function flip_fn() {
                     card.classList.toggle('flipCard');
-                    button.classList.toggle('back');
                     });
 
                 let divFlipCard = document.querySelector('.user-card-back');
