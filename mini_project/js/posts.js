@@ -1,7 +1,6 @@
 let url = new URL(location.href);
-// console.log(url);
+
 let postID = url.searchParams.get("post");
-// console.log(postID)
 
 fetch(`https://jsonplaceholder.typicode.com/posts/${postID}`)
     .then((response) => response.json())
@@ -18,10 +17,10 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postID}`)
 
 
        fetch(`https://jsonplaceholder.typicode.com/posts/${postID}/comments`)
-       .then (Response => Response.json())
+           .then (Response => Response.json())
            .then( comments => {
                let bg = document.querySelector('.background');
-        let button = document.createElement('button');
+               let button = document.createElement('button');
                button.innerHTML = 'hide comments';
                let commentsDiv = document.createElement('div');
                commentsDiv.classList.add('comments');
@@ -41,28 +40,27 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postID}`)
                        }
                    };
 
-               for (const comment of comments) {
-                   let comTitleDiv = document.createElement('div');
-                   let addCom = document.createElement('p');
-                   let comTitle = document.createElement('h5')
-                   comTitleDiv.classList.add('commTitleDiv');
-                   console.log(comment.body);
+                   for (const comment of comments) {
+                      let comTitleDiv = document.createElement('div');
+                      let addCom = document.createElement('p');
+                      let comTitle = document.createElement('h5');
+                      comTitleDiv.classList.add('commTitleDiv');
 
-                   comTitle.innerHTML = `comment №${comment.id}`
-                   addCom.innerHTML = comment.body;
+                      comTitle.innerHTML = `comment №${comment.id}`
+                      addCom.innerHTML = comment.body;
 
-                   comTitleDiv.append(comTitle, addCom);
+                      comTitleDiv.append(comTitle, addCom);
 
 
-                   commentsDiv.append(comTitleDiv)
+                      commentsDiv.append(comTitleDiv);
 
 
                }
 
-                  child.append(idTitle, bodyPost, button, commentsDiv);
+                   child.append(idTitle, bodyPost, button, commentsDiv);
 
 
-           })
+           });
 
 
 

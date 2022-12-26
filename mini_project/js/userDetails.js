@@ -1,7 +1,6 @@
 let url = new URL (location.href);
-// console.log(url)
+
 let id = url.searchParams.get('id');
-// console.log(id)
 
 fetch(`https://jsonplaceholder.typicode.com/users/${id}` )
     .then(resp => resp.json())
@@ -86,14 +85,14 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}` )
                     });
 
                 let divFlipCard = document.querySelector('.user-card-back');
-                let postsTitle = document.createElement('h2')
+                let postsTitle = document.createElement('h2');
                 postsTitle.innerHTML = 'Users posts:';
                 divFlipCard.appendChild(postsTitle)
                         let ol = document.createElement('ol');
 
                 for (const post of posts) {
                         let li = document.createElement('li');
-                        let a = document.createElement('a')
+                        let a = document.createElement('a');
 
                         a.href = `posts_index.html?post=${post.id}`;
                         a.target ='_blank';
@@ -104,46 +103,6 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}` )
                         divFlipCard.appendChild(ol);
                     }
 
-            })
+            });
 
 });
-
-
-
-
-//     fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
-//         .then(response => response.json())
-//         .then(posts => {
-//
-// let button = document.querySelector('.button')
-// let card = document.querySelector('.users-card')
-//
-//            button.addEventListener('click',
-//                 function flip_fn() {
-//                card.classList.toggle('flipCard')
-//
-//
-//             let divFlipCard = document.querySelector('.users-card.flipCard > .user-card-back');
-//             // let divUserCard = document.querySelector('.user-card-back');
-//             let ul = document.createElement('ul');
-//             let a = document.createElement('a')
-//                     a.href = `posts_index.html/?=${id}/`
-//
-//             setTimeout( function () {
-//
-//                     for (let i = 0; i < posts.length; i++) {
-//                         const post = posts[i];
-//                         let li = document.createElement('li');
-//                         li.innerText = post.title;
-//                         ul.appendChild(li);
-//
-//                         divFlipCard.appendChild(ul);
-//                     }
-//
-//             }, 600)
-//
-//
-//         });
-//         })
-
-
